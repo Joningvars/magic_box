@@ -69,12 +69,15 @@ const MagicBox = forwardRef<MagicBoxHandle>((_, ref) => {
   };
 
   const resize = () => {
+    //this shit has a mind of its own and only works sometimes
     const newIndex = index + 1;
     // if index is 3, we get 0 again
     index = newIndex % sizes.length;
 
     setSize(sizes[index]);
   };
+
+  console.log({ size });
 
   return (
     <div
